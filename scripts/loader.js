@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     const routes = {
         /* Partials */
         header: {
-            html: "../partials/header/header.html",
-            css: "../partials/header/header.css",
-            js: "../partials/header/header.js",
+            html: "partials/header/header.html",
+            css: "partials/header/header.css",
+            js: "partials/header/header.js",
             target: "#header"
         },
         content: {
-            html: "../partials/content/content.html",
-            css: "../partials/content/content.css",
+            html: "../../partials/content/content.html",
+            css: "../../partials/content/content.css",
             js: "../partials/content/content.js",
             target: "#content"
         },
