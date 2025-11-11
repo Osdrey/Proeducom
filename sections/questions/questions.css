@@ -1,0 +1,202 @@
+#questions {
+    background: linear-gradient(to bottom, var(--color-sky-blue) 0%, var(--color-white) 85%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Título */
+    .faq-wrapper {
+        margin: 0 auto;
+    }
+
+    .faq-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .faq-header h2 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .faq-header .questions { color: var(--color-royal-blue); }
+    .faq-header p { color: var(--color-medium-gray); font-size: 1rem; }
+
+/* Contenedor principal */
+    .faq-container {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 7rem;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+/* Video */
+    .faq-video {
+        flex: 0 0 55%;
+        max-width: 65rem;
+        min-width: 45rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 1rem;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+        overflow: hidden;
+    }
+
+    .video-slide {
+        width: 100%;
+        height: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-dark-gray);
+    }
+
+    .video-slide.active {
+        display: flex;
+    }
+
+    .video-slide iframe {
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+    }
+
+/* Flechas */
+    .video-arrow {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2rem;
+        width: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--color-medium-gray);
+        border: none;
+        background: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border-radius: 30%;
+        z-index: 50;
+    }
+
+    .video-arrow:hover { color: var(--color-lime-green); }
+    .faq-video .video-arrow.left { left: -2rem; }
+    .faq-video .video-arrow.right { right: -2rem; }
+
+/* Puntos */
+    .video-dots {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .video-dots .dot {
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        background: var(--color-medium-gray);
+        border-radius: 50%;
+        margin: 0 0.5rem;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+    .video-dots :hover { background: var(--color-lime-green); }
+    .video-dots .dot.active { background: var(--color-royal-blue); }
+
+/* Acordeón */
+    .faq-accordion {
+        flex: 0 0 38%;
+        max-width: 25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .accordion-item {
+        position: relative;
+    }
+
+    /* Cabecera de la pregunta */
+    .accordion-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background: none;
+        border: none;
+        width: 100%;
+        color: var(--color-dark-gray);
+        font-weight: 600;
+        cursor: pointer;
+        text-align: left;
+        font-size: 1.05rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.1rem solid var(--color-medium-gray);
+        transition: border-color 0.3s;
+    }
+
+    /* Iconos */
+    .accordion-icon-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-royal-blue);
+        color: var(--color-white);
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+    }
+
+    /* Lineas*/
+    .accordion-item.active .accordion-icon-circle {
+        background: var(--color-lime-green);
+    }
+    .accordion-item.active .accordion-content {
+        display: block;
+        border-bottom: 0.1rem solid var(--color-medium-gray);
+    }
+
+    /* Flecha de acordeón */
+    .accordion-chevron {
+        color: var(--color-royal-blue);
+        font-size: 1rem;
+        margin-left: auto;
+        transition: transform 0.25s, color 0.25s;
+        transform: rotate(270deg);
+    }
+    .accordion-item.active .accordion-chevron {
+        transform: rotate(90deg);
+        color: var(--color-lime-green);
+    }
+
+    /* Contenido */
+    .accordion-content {
+        display: none;
+        padding: 1rem 0 0 3rem;
+        color: var(--color-dark-gray);
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+    .accordion-item.active .accordion-content {
+        display: block;
+    }

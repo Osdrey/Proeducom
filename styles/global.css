@@ -1,0 +1,78 @@
+/* Paleta de colores */
+    :root {
+      /* Colores principales (verdes) */
+      --color-lime-green: #01a648;    /* Verde lima: color principal del sitio, usado en header, footer, botones primarios */
+      --color-leaf-green: #47ba75;    /* Verde hoja: verde secundario: fondos suaves, detalles de secciones */
+      --color-dark-green: #028a3b;    /* Verde oscuro: hover, acentos fuertes, estados activos */
+
+      /* Colores secundarios (azules) */
+      --color-royal-blue: #0b72b9;    /* Azul rey: secciones secundarias, enlaces */
+      --color-deep-blue: #084a78;     /* Azul oscuro: azul profundo: fondos sólidos secundarios, footer alterno */
+      --color-sky-blue: #b0d9f5;      /* Azul cielo: azul claro: hover, fondos suaves secundarios, iconos */
+
+      /* Acento llamativo */
+      --color-golden-yellow: #ffb400; /* Amarillo dorado: acento llamativo: CTAs, botones secundarios, iconos de acción */
+
+      /* Neutros y grises */
+      --color-white: #ffffff;         /* Blanco: fondo principal */
+      --color-light-gray: #e9e9e9;/* Gris claro: fondo alterno, bloques secundarios */
+      --color-dark-gray: #1a1a1a;/* Gris oscuro: texto principal */
+      --color-medium-gray: #666666;   /* Gris medio: texto secundario, descripciones */
+      --color-black: #000000;           /* Negro: iconos*/
+
+      /* Colores de estado (opcionales) */
+      --color-success: #28a745;       /* Verde éxito: mensajes de confirmación */
+      --color-warning: #ffc107;       /* Amarillo advertencia */
+      --color-danger: #dc3545;        /* Rojo error */
+
+      /* Tipografías y utilidades */
+      --font-primary: "Poppins", sans-serif;     /* Fuente principal: títulos y encabezados */
+      --font-secondary: "Open Sans", sans-serif; /* Fuente secundaria: párrafos y textos largos */
+
+      /* Tamaños y transiciones */
+      --border-radius: 0.5rem;        /* Radio estándar para botones y tarjetas */
+      --transition-speed: 0.3s;       /* Velocidad de transición para hover y animaciones */
+    }
+
+/* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-secondary);
+        color: var(--color-dark-gray);
+        background: var(--color-white);
+        scroll-behavior: smooth;
+    }
+
+/* Sectios */
+    section.content {
+        margin: 0 auto;
+        min-height: 80rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    section.content:nth-child(even){
+        background:var(--color-white);
+    }
+
+    section.content h2 {
+        margin-bottom:20px;
+        color:var(--color-dark-green);
+    }
+
+    section.content p {
+        margin-bottom:1rem;
+        line-height:1.6;
+    }
+
+    section.content p, 
+    section.content h2, 
+    section.content h3 {
+        max-width: 100%;
+    }

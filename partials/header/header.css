@@ -1,0 +1,75 @@
+header {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.2);
+    background: var(--color-dark-green);
+    color: var(--color-white);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 40rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;       
+    flex-direction: row;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 500;
+    padding-bottom: 0.4rem;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {  transform: scale(1.2); }
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.3rem;
+    background: var(--color-white);
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+header nav ul li a:hover::after,
+header nav ul li a.active::after {
+    transform: scaleX(1);
+}
+
+header .logo-container a::after {
+    display: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 2.5rem;
+    width: auto;
+    margin-left: -1rem;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+}
