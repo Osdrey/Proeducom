@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     overflow: hidden;
 }
@@ -12,20 +12,18 @@
     .slide {
         position: absolute;
         top: 0; left: 0;
-        width: 100%; height: 100%;
-        display: flex;
+        width: 100%;
+        height: 100%;
         justify-content: center;
         align-items: center;
         text-align: left;
+        display: flex;
         background: linear-gradient(to bottom, var(--color-deep-blue), var(--color-sky-blue));
         color: var(--color-white);
         opacity: 0;
         transition: opacity 1s ease-in-out;
-        padding: 0 0.5rem;
-        gap: 0rem;
-    }
-
-    .slide {
+        padding: clamp(1rem, 3vw, 4rem);
+        gap: clamp(1rem, 3vw, 4rem);
         pointer-events: none;
     }
 
@@ -33,7 +31,7 @@
 
 /* Contenedor de texto para limitar ancho */
     .slide .text-container {
-        max-width: 30rem;
+        max-width: clamp(10rem, 25vw, 40rem);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -41,25 +39,25 @@
 
 /* Títulos y párrafos */
     .slide h1 { 
-        font-size: 2rem; 
-        margin-bottom: 1rem; 
+        font-size: clamp(1.25rem, 2vw, 2.5rem);
+        margin-bottom: clamp(0.5rem, 1vw, 1.5rem);
     }
 
     .slide p { 
-        font-size: 1.5rem; 
-        margin-bottom: 2rem; 
+        font-size: clamp(0.8rem, 1.3vw, 1.5rem);
+        margin-bottom: clamp(1rem, 2vw, 2.5rem);
     }
 
 /* Botón a la izquierda */
     .slide button {
-        font-size: 1.5rem; 
+        font-size: clamp(0.8rem, 1.25vw, 1.5rem); 
         background: transparent;
         color: var(--color-white);
         border: 0.2rem solid var(--color-white);
-        padding: 1rem 2rem;
+        padding: clamp(0.6rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem);
         border-radius: 0.5rem;
         cursor: pointer;
-        margin-bottom: 9rem;
+        margin-bottom: clamp(5rem, 7vw, 9rem);
         align-self: flex-start;
     }
 
@@ -71,8 +69,9 @@
 
 /* Imagen a la derecha */
     .slide img {
-        height: 70%;
         width: auto;
+        max-width: clamp(10rem, 40vw, 35rem);
+        max-height: 80vh;
         object-fit: contain;
     }
 
@@ -89,7 +88,7 @@
     .curve svg {
         display:block;
         width:100%;
-        height:25rem;
+        height: clamp(15rem, 20vw, 25rem);
     }
 
     .curve path { fill:var(--color-white); }
@@ -98,10 +97,10 @@
     .arrow {
         position: absolute;
         top: 40%;
-        font-size: 3rem;
+        font-size: clamp(1.5rem, 2.5vw, 3.5rem);
         color: var(--color-white);
-        width: 4rem;
-        height: 4rem;
+        width: clamp(2rem, 3vw, 4rem);
+        height: clamp(2rem, 3vw, 4rem);
         border-radius: 50%;
         cursor: pointer;
         z-index: 10;

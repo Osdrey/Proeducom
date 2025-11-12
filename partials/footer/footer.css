@@ -1,12 +1,18 @@
 footer {
     position: fixed;
-    bottom:0; left:0; width:100%;
-    box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.5);
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background: var(--color-dark-green);
     color: var(--color-white);
-    font-size: 1.2rem;
-    font-weight: 35rem;
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
+    font-weight: 400; /* normal */
     text-align: center;
-    padding: 1rem 2rem;
+    padding: clamp(0.5rem, 0.75vw, 1rem) clamp(1rem, 5vw, 2rem);
+    box-shadow: 0 clamp(0.2rem, 0.3vw, 0.4rem) clamp(0.4rem, 0.6vw, 0.8rem) rgba(0, 0, 0, 0.5);
     z-index: 1000;
+}
+
+body {
+    padding-bottom: clamp(4rem, 5vw, 6rem);
 }

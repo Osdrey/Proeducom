@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     overflow: hidden;
     text-align: center;
@@ -15,24 +15,24 @@
 /* Titulares */
     #offers h3 {
         color: var(--color-royal-blue);
-        font-size: 1.5rem;
-        margin-bottom: 0.8rem;
+        font-size: clamp(1rem, 1.25vw, 1.5rem);
+        margin-bottom: clamp(0.5rem, 0.65vw, 0.8rem);
         font-weight: 600;
     }
 
     #offers h2 {
         color: var(--color-dark-green);
-        font-size: 2rem;
-        max-width: 50rem;
-        margin: 0 auto 1.2rem;
+        font-size: clamp(1.4rem, 1.7vw, 2rem);
+        max-width: clamp(20rem, 40vw, 50rem);
+        margin: 0 auto clamp(0.8rem, 1vw, 1.2rem);
         line-height: 1.4;
     }
 
     #offers p {
         color: var(--color-medium-gray);
-        margin-bottom: 2.5rem;
-        font-size: 1.1rem;
-        max-width: 60rem;
+        margin-bottom: clamp(1.5rem, 2vw, 2.5rem);
+        font-size: clamp(0.9rem, 1vw, 1.1rem);
+        max-width: clamp(25rem, 50vw, 60rem);
     }
 
 /* Grid de tarjetas */
@@ -41,7 +41,7 @@
         justify-content: center;
         align-items: stretch;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: clamp(0.5rem, 1vw, 1rem);
     }
 
 /* Tarjetas */
@@ -49,8 +49,8 @@
         background: var(--color-white);
         border-radius: 1rem;
         box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.1);
-        width: 18rem;
-        padding: 3rem 2rem;
+        width: clamp(14rem, 16vw, 18rem);
+        padding: clamp(2rem, 3vw, 3rem) clamp(1rem, 2vw, 2rem);
         transition: all 0.3s ease;
         cursor: pointer;
         border-bottom: 0.4rem solid transparent;
@@ -61,15 +61,15 @@
     }
 
     .offer-card .icono img {
-        width: 5rem;
-        height: 5rem;
+        width: clamp(3rem, 4vw, 5rem);
+        height: clamp(3rem, 4vw, 5rem);
         filter: brightness(0) saturate(100%) invert(28%) sepia(9%) saturate(626%) hue-rotate(93deg) brightness(95%) contrast(91%);
         transition: all 0.3s ease;
     }
 
     .offer-card h4 {
-        margin-top: 1rem;
-        font-size: 1.3rem;
+        margin-top: clamp(0.6rem, 1vw, 1rem);
+        font-size: clamp(1rem, 1.2vw, 1.3rem);
         color: var(--color-dark-gray);
     }
 

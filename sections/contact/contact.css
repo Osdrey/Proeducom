@@ -13,19 +13,18 @@
 }
 
 .contact-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(18rem, 25vw, 30rem), 1fr));
     justify-content: center;
     align-items: center;
-    gap:1rem;
-    flex-wrap: nowrap;
-    width: 100%;
-    margin-bottom: 3rem;
+    text-align: center;
+    width: 80%;
 }
 
 /* Blob */
     .contact-image {
         position: relative;
-        width: 35rem;
+        width: clamp(18rem, 25vw, 35rem);
         aspect-ratio: 1;
         background: linear-gradient(135deg, var(--color-deep-blue), var(--color-sky-blue));
         clip-path: shape(
@@ -42,16 +41,17 @@
         overflow: hidden;
         display: flex;
         justify-content: center;
+        justify-self: center;
         align-items: center;
         transition: transform 0.6s ease, box-shadow 0.4s ease;
     }
 
 /* Imagen */
     .contact-image img {
-        width: 60%;
+        width: clamp(40%, 60%, 70%);
+        margin-top: clamp(4rem, 6vw, 8rem);
+        margin-right: clamp(1rem, 2vw, 3rem);
         height: auto;
-        margin-top: 8rem;
-        margin-right: 3rem;
         object-fit: contain;
         transform: translateY(5%);
     }
@@ -64,20 +64,22 @@
 /* Info */
     .contact-info {
         flex: 1;
-        max-width: 22rem;
+        max-width: clamp(18rem, 20vw, 22rem);
         text-align: left;
+        justify-self: center;
     }
 
     .contact-info h2 {
         color: var(--color-royal-blue);
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: clamp(1.5rem, 1.75vw, 2rem);
+        margin-bottom: clamp(0.5rem, 0.75vw, 1rem);
     }
 
     .contact-info h3 {
         color: var(--color-red);
         font-weight: 600;
-        margin-bottom: 2rem;
+        font-size: clamp(1rem, 1.5vw, 2rem);
+        margin-bottom: clamp(1rem, 1.5vw, 2rem);
     }
 
 /* Iconos*/
@@ -85,13 +87,13 @@
         display: flex;
         align-items: center;
         text-decoration: none;
-        gap: 1rem;
-        padding: 1rem 0.5rem;
+        gap: clamp(0.5rem, 0.75vw, 1rem);
+        padding: clamp(0.5rem, 0.75vw, 1rem) clamp(0.3rem, 0.4vw, 0.5rem);
     }
 
     .contact-item img {
-        width: 2rem;
-        height: 2rem;
+        width: clamp(1.5rem, 1.75vw, 2rem);
+        height: clamp(1.5rem, 1.75vw, 2rem);
         object-fit: contain;
         flex-shrink: 0;
         filter: brightness(0) saturate(100%) invert(34%) sepia(78%) saturate(2257%) hue-rotate(189deg) brightness(85%) contrast(93%);
@@ -109,16 +111,16 @@
     .contact-item p {
         color: var(--color-medium-gray);
         margin: 0.2rem 0 0 0;
-        font-size: 0.95rem;
+        font-size: clamp(0.75rem, 0.85vw, 0.95rem);
     }
 
     .contact-item:hover {
         background: linear-gradient(135deg, var(--color-deep-blue), var(--color-sky-blue));
         box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
         border-radius: 0.5rem ;
-        height: 5rem;
-        width: 20rem;
-        padding: 1rem 1rem;
+        height: clamp(4rem, 4.5vw, 5rem);
+        width: clamp(14rem, 17vw, 20rem);
+        padding: clamp(0.8rem, 0.9vw, 1rem);
         cursor: pointer;
     }
 
@@ -133,9 +135,10 @@
 
 /* Mapa */
     .map-container {
-        width: 30rem;
-        height: 25rem;
+        width: clamp(18rem, 24vw, 30rem);
+        height: clamp(15rem, 20vw, 25rem);
         border-radius: 1rem;
         overflow: hidden;
         box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.2);
+        justify-self: center;
     }

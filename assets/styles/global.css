@@ -48,31 +48,12 @@
         scroll-behavior: smooth;
     }
 
-/* Sectios */
+/* Sections */
     section.content {
         margin: 0 auto;
-        min-height: 80rem;
+        min-height: clamp(50rem, 80vh, 80rem);
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-
-    section.content:nth-child(even){
-        background:var(--color-white);
-    }
-
-    section.content h2 {
-        margin-bottom:20px;
-        color:var(--color-dark-green);
-    }
-
-    section.content p {
-        margin-bottom:1rem;
-        line-height:1.6;
-    }
-
-    section.content p, 
-    section.content h2, 
-    section.content h3 {
-        max-width: 100%;
+        padding: clamp(2rem, 5vw, 4rem);
     }
